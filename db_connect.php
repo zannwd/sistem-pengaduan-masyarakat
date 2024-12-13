@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost';
-$user = 'root'; 
-$password = ''; 
-$database = 'pengaduan_db';
+$host = 'sql310.ezyro.com';
+$user = 'ezyro_37910616'; 
+$password = '5c2d66044d56'; 
+$database = 'ezyro_37910616_pengaduan_db';
 
 $conn = mysqli_connect($host, $user, $password, $database);
 
