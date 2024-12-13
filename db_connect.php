@@ -1,12 +1,26 @@
 <?php
-$host = 'sql310.ezyro.com';
-$user = 'ezyro_37910616'; 
-$password = '5c2d66044d56'; 
-$database = 'ezyro_37910616_pengaduan_db';
+// Supabase database URL
+$databaseUrl = "postgres://postgres.apbkobhfnmcqqzqeeqss:Nasigoreng_10@aws-0-ca-central-1.pooler.supabase.com:5432/postgres";
 
-$conn = mysqli_connect($host, $user, $password, $database);
+// Parse database URL
+$dbparts = parse_url($databaseUrl);
 
-if (!$conn) {
-    die("Koneksi ke database gagal: " . mysqli_connect_error());
+$host = $dbparts['host'];
+$port = $dbparts['port'];
+$dbname = ltrim($dbparts['path'], '/');
+$username = $dbparts['user'];
+$password = $dbparts['pass'];
+
+try {
+    // Create PDO instance for PostgreSQL
+    $dsn = "pgsql:host=$host;port=$port;dbname=$dbname";
+    $conn = new PDO($dsn, $username, $password, [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, // Enable exceptions
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, // Fetch associative arrays
+    ]);
+
+    echo "Koneksi ke database berhasil!";
+} catch (PDOException $e) {
+    die("Koneksi ke database gagal: " . $e->getMessage());
 }
 ?>
