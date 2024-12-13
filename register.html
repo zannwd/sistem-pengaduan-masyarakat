@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-700 flex items-center justify-center min-h-screen">
+    <div class="bg-gray-100 p-8 rounded-lg shadow-lg w-full max-w-sm">
+      <div class="flex justify-center mb-4">
+        <div class="bg-teal-500 p-4 rounded-full">
+          <i class="fas fa-user text-white text-4xl"></i>
+        </div>
+      </div>
+      <h2 class="text-center text-2xl font-semibold mb-6">Register Admin</h2>
+      <form action="register_process.php" method="POST">
+        <div class="mb-4">
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Username"
+            class="w-full p-3 border border-gray-300 rounded"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            class="w-full p-3 border border-gray-300 rounded"
+            required
+          />
+        </div>
+        <div class="mb-6">
+          <button
+            type="submit"
+            class="w-full bg-teal-500 text-white p-3 rounded hover:bg-teal-600"
+          >
+            Register
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

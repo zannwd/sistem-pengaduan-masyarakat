@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pengaduan Masyarakat Lendang Nangke" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Landing Page</title>
+  </head>
+  <body>
+    <header>
+      <a href="login.html"><button class="admin-button"><strong>Login</strong></button></a>
+      <a href="lihat_respon.php"><button  class="admin-button"><strong>Lihat Balasan</strong></button></a>
+    </header>
+    <section class="hero-section">
+      <div class="hero-content">
+        <h2>Pengaduan Masyarakat</h2>
+        <p class="text">
+          Kami sangat menghargai setiap masukan dan keluhan dari masyarakat
+          sebagai bagian dari upaya kami meningkatkan kualitas layanan serta
+          memastikan transparansi. Anda dapat mengajukan pengaduan melalui
+          berbagai saluran, seperti formulir online yang tersedia di website
+          kami, email ke pengaduan@desalendangnangka.com, telepon ke nomor (021) 1234-5678,
+          atau langsung ke kantor kami di Jl. No. 12, Lendang Nangka, pada hari
+          kerja. Saat menyampaikan pengaduan, mohon sertakan informasi lengkap
+          berupa identitas Anda (nama,NIK, alamat, nomor telepon, email), detail
+          keluhan, bukti pendukung, dan tanggal kejadian untuk mempercepat
+          proses penanganan. Setiap pengaduan yang masuk akan melalui tahapan
+          penanganan, mulai dari penerimaan dan verifikasi, analisis awal,
+          investigasi, tindak lanjut, hingga pemberian hasil kepada pelapor.
+          Kami berkomitmen untuk menyelesaikan setiap pengaduan dalam waktu
+          maksimal 30 hari kerja. Jika waktu tambahan diperlukan, kami akan
+          menginformasikan alasan dan perkiraan waktu penyelesaian kepada Anda.
+          Semua pengaduan akan diproses dengan menjaga kerahasiaan identitas
+          pelapor, kecuali jika diharuskan oleh hukum. Selain itu, kami juga
+          menerima saran dan masukan konstruktif untuk perbaikan layanan. Anda
+          dapat menggunakan saluran yang sama untuk menyampaikan ide Anda. Terima kasih
+          atas kepercayaan dan partisipasi Anda dalam membantu kami memberikan
+          layanan yang lebih baik.
+        </p>
+      </div>
+      <div class="hero-image">
+        <img src="assets/b.png" alt="Hero Image" />
+      </div>
+    </section>
+    <section class="box-section">
+      <div class="box">
+        <h3>Jumlah Penduduk Laki-laki</h3>
+        <h4>6.263</h4>
+      </div>
+      <div class="box">
+        <h3>Jumlah Penduduk Perempuan</h3>
+        <h4>6.147</h4>
+      </div>
+      <div class="box">
+        <h3>Jumlah Penduduk</h3>
+        <h4>12.410</h4>
+      </div>
+      <div class="box">
+        <h3>Data Pertahun</h3>
+        <h4>2024</h4>
+      </div>
+    </section>
+
+    <section class="second-section">
+      <div class="form-section">
+        <form action="sumbit_pengaduan.php" method="POST" enctype="multipart/form-data">
+          <h2>Buat Pengaduan</h2>
+          <label for="nik">NIK :</label>
+          <input type="number" id="nik" name="nik" required />
+          <label for="nama">Nama Lengkap :</label>
+          <input type="text" id="nama" name="nama" required />
+          <label for="noTelp">No Telp :</label>
+          <input type="text" id="noTelp" name="noTelp" required />
+          <label for="pengaduan">Pengaduan :</label>
+          <textarea id="pengaduan" name="pengaduan" cols="30" rows="5" required></textarea>
+          <label for="gambar">Upload Gambar Terkait :</label>
+          <input type="file" id="gambar" name="gambar" required />
+          <button type="submit">Kirim</button>
+        </form>
+      </div>
+
+      <div class="report-section">
+        <h2>Berita</h2>
+        <div class="contain">
+          <p class="tgl">30 Oktober 2024</p>
+          <div class="box-report">
+            <div>
+              <div class="report-image">
+                <img
+                  src="assets/a.jpg"
+                  width="550"
+                  height="250"
+                  alt="Poto Laporan"
+                />
+              </div>
+              <p class="text">
+                Dalam rangka menghadapi Persiapan Pengamanan Pilkada pada 27
+                November 2024, Pemdes Desa Lendang Nangka menyelenggarakan apel
+                KAMTIBMAS yang bertempat di Halaman Kantor Desa Lendang Nangka,
+                pada Hari Rabu (28/10/2024). Apel tersebut merupakan wujud
+                kesiap siagaan dalam mendukung terciptanya kondisi KAMTIBNAS
+                yang Kondusif di Desa Lendang Nangka dalam rangka menghadapi
+                Pilkada Serentak. Kepala Desa Lendang Nangka selaku pimpinan
+                Apel menyampaikan bahwa kondisi yang aman dan kondusif merupakan
+                tanggung jawab bersama, sehingga sinergitas antara PEMDES - TNI-
+                Polri merupakan faktor penting guna tercapainya keamanan dan
+                ketertiban dalam pelaksanaan Pilkada serentak ini.
+              </p>
+            </div>
+          </div>
+        </div>
+  </body>
+</html>
